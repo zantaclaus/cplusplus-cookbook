@@ -21,6 +21,8 @@
 - [CMath library](#cmath-library)
 - [Comments](#comments)
 
+---
+
 ### Variables
 
 วิธีการสร้างตัวแปร จะอยู่ในรูปแบบของ `VAR_TYPE VAR_NAME = VALUE;` เช่น
