@@ -92,6 +92,8 @@ int main()
 }
 ```
 
+---
+
 ### Constants
 
 วิธีการสร้างค่าคงที่ด้วยคำสั่ง `const` เพื่อป้องกันไม่ให้ตัวแปรถูกเปลี่ยนแปลงค่า
@@ -107,6 +109,8 @@ int main()
     return 0;
 }
 ```
+
+---
 
 ### Naming conventions
 
@@ -124,6 +128,8 @@ int main()
     return 0;
 }
 ```
+
+---
 
 ### Mathematical expressions
 
@@ -154,6 +160,8 @@ int main()
 }
 ```
 
+---
+
 ### Order of Operation
 
 ```c++
@@ -169,6 +177,8 @@ int main()
     return 0;
 }
 ```
+
+---
 
 ### Writing output to the console
 
@@ -263,6 +273,8 @@ int main()
 }
 ```
 
+---
+
 ### Reading input from the console
 
 อ่านค่าจาก console ด้วยคำสั่ง `cin`
@@ -344,6 +356,8 @@ int main()
 }
 ```
 
+---
+
 ### Cmath library
 
 > document : https://cplusplus.com/reference/cmath/
@@ -389,6 +403,8 @@ int main()
     return 0;
 }
 ```
+
+---
 
 ### Comments
 
