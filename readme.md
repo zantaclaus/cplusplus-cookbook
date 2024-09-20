@@ -1,35 +1,57 @@
-## Contents
+# C++ Cookbook
 
-- Chapter 1 - Fundamental
+## Table of Contents
+
+1. [Fundamental]
+2. [Data Types]
+3. [Decision Making]
+4. [Loops]
+5. [Array]
+6. [String]
+
+<!-- - Fundamental
+
   - [Variables](#variables)
   - [Constants](#constants)
   - [Naming conventions](#naming-conventions)
-  - [Order of Operators](#order-of-operation)
+  - [Mathematical expressions](#mathematical-expressions)
+  - [Order of Operation](#order-of-operation)
+  - [Writing output to the console](#writing-output-to-the-console)
+  - [Reading input from the console](#reading-input-from-the-console)
+  - [CMath library](#cmath-library)
+  - [Comments](#comments)
+
+  - [Fundamental Types] -->
+
+## Fundamental
+
+- [Variables](#variables)
+- [Constants](#constants)
+- [Naming conventions](#naming-conventions)
+- [Mathematical expressions](#mathematical-expressions)
+- [Order of Operation](#order-of-operation)
 - [Writing output to the console](#writing-output-to-the-console)
 - [Reading input from the console](#reading-input-from-the-console)
 - [CMath library](#cmath-library)
 - [Comments](#comments)
 
-## Variables
+### Variables
 
-วิธีสร้างตัวแปร กำหนดค่าเริ่มต้น และแสดงผล
+**วิธีการสร้างตัวแปร จะอยู่ในรูปแบบของ `VAR_TYPE VAR_NAME = VALUE;` เช่น**
 
 ```c++
 #include <iostream>
-using namespace std;
 
 int main()
 {
     int money = 100;
-    int count; = 0;
     double height = 160.5;
-    cout << money;
 
     return 0;
 }
 ```
 
-สร้างตัวแปร แต่ไม่ได้กำหนดค่าเริ่มต้น ค่าเริ่มต้นจะถูก random ให้กับตัวแปร
+**หรือเราจะไม่กำหนดค่าเริ่มต้นให้กับตัวแปรก็ได้ แต่ compiler ทำการสุ่มค่าให้**
 
 ```c++
 #include <iostream>
@@ -38,13 +60,13 @@ using namespace std;
 int main()
 {
     int money;
-    cout << money; // Some random number
+    cout << money; // money = some random number
 
     return 0;
 }
 ```
 
-#### Challenge - Swap value of two variables
+**Program Example : สลับค่าตัวแปร**
 
 ```c++
 #include <iostream>
@@ -52,20 +74,41 @@ using namespace std;
 
 int main()
 {
-    int a = 1;
-    int b = 2;
+    int a = 10;
+    int b = 20;
 
-    // Logic to swap variable //
+    int temp = a;
+    a = b;
+    b = temp;
 
-    cout << a << " " << b; // 2 1
+    cout << a << " " << b;
 
     return 0;
 }
 ```
 
-## Constants
+```c++
+#include <iostream>
+using namespace std;
 
-การสร้าง**ค่าคงที่**
+int main()
+{
+    int a = 10;
+    int b = 20;
+
+    a = a + b; // Step 1: Add both numbers
+    b = a - b; // Step 2: Subtract the new value of a by b to get original a
+    a = a - b; // Step 3: Subtract the new value of b from the new value of a to get original b
+
+    cout << a << " " << b;
+
+    return 0;
+}
+```
+
+### Constants
+
+วิธีการสร้างค่าคงที่ด้วยคำสั่ง `const` เพื่อป้องกันไม่ให้ตัวแปรถูกเปลี่ยนแปลงค่า
 
 ```c++
 #include <iostream>
@@ -79,7 +122,9 @@ int main()
 }
 ```
 
-## Naming conventions
+### Naming conventions
+
+ในภาษา C++ มักจะใช้ Camel Case กัน
 
 ```c++
 #include <iostream>
@@ -94,7 +139,7 @@ int main()
 }
 ```
 
-## Mathematical expressions
+### Mathematical expressions
 
 ```c++
 #include <iostream>
@@ -110,14 +155,20 @@ int main()
     z = x * y;
     z = x / y;
     z = x % y;
+
+    x += 1;
+
     x++;
     ++x;
+
+    z = x++;
+    z = ++x;
 
     return 0;
 }
 ```
 
-## Order of Operation
+### Order of Operation
 
 ```c++
 #include <iostream>
@@ -133,7 +184,7 @@ int main()
 }
 ```
 
-## Writing output to the console
+### Writing output to the console
 
 เขียนข้อมูลไปที่ console
 
@@ -183,7 +234,7 @@ int main()
 }
 ```
 
-สามารถรวบคำสั่งได้ แนะนำให้ tab ให้ตรงกับผลลัพธ์
+**สามารถรวบคำสั่งได้ (แนะนำให้ tab บรรทัดที่ 2 ขึ้นไปให้ตำแหน่งอยู่ตรงกับผลลัพธ์)**
 
 ```c++
 #include <iostream>
@@ -200,7 +251,7 @@ int main()
 }
 ```
 
-#### ​Challenge - Tax and Service charge calcualtor
+**Program Example : โปรแกรมคำนวน vat 7% + service charge 10%**
 
 ```c++
 #include <iostream>
@@ -226,9 +277,9 @@ int main()
 }
 ```
 
-## Reading input from the console
+### Reading input from the console
 
-อ่านค่าจาก console ด้วยคำสั่ง `cin`
+**อ่านค่าจาก console ด้วยคำสั่ง `cin`**
 
 ```c++
 #include <iostream>
@@ -236,7 +287,7 @@ using namespace std;
 
 int main()
 {
-    cout << "Enter a value: "; // Try input integer/floating number
+    cout << "Enter a value: ";
 
     int value;
     cin >> value;
@@ -247,7 +298,7 @@ int main()
 }
 ```
 
-ในการรับค่าตัวแปรมากกว่า 1 ตัวสามารถใช้คั่นด้วย space หรือ enter ก็ได้
+**ในการรับค่าตัวแปรมากกว่า 1 ตัวสามารถใช้คั่นด้วย space หรือ enter ก็ได้**
 
 ```c++
 #include <iostream>
@@ -268,7 +319,7 @@ int main()
 }
 ```
 
-เหมือนกับการ `cout` เราสามารถรวบคำสั่งได้
+**เช่นเดียวกับการใช้งาน `cout` เราสามารถรวบคำสั่ง `cin` ได้**
 
 ```c++
 #include <iostream>
@@ -288,7 +339,7 @@ int main()
 }
 ```
 
-#### Challenge - Celsius to Fahrenheit
+**Program Exmaple : Fahrenheit to Celsius**
 
 ```c++
 #include <iostream>
@@ -307,9 +358,11 @@ int main()
 }
 ```
 
-## Cmath library
+### Cmath library
 
 > document : https://cplusplus.com/reference/cmath/
+
+**ตัวอย่างการใช้งานฟังก์ชันจาก cmath library**
 
 ```c++
 #include <iostream>
@@ -319,18 +372,18 @@ using namespace std;
 int main()
 {
     int p = pow(2, 5);
-    cout << "Power = " << p << endl;
+    cout << "Power = " << p << endl;    // ยกกำลัง
 
     double c = ceil(1.34);
-    cout << "Ceil  = " << c << endl;
+    cout << "Ceil = " << c << endl;     // ปัดขึ้น
 
     double f = floor(1.74);
-    cout << "Floor = " << f;
+    cout << "Floor = " << f;            // ปัดลง
     return 0;
 }
 ```
 
-#### Challenge - Calculate area of a circle
+**Program Example - คำนวณพื้นที่วงกลม**
 
 ```c++
 #include <iostream>
@@ -351,7 +404,9 @@ int main()
 }
 ```
 
-## Comments
+### Comments
+
+การคอมเมนต์โค้ด เพื่อผู้อื่น และตัวเองในอนาคต
 
 ```c++
 #include <iostream>
