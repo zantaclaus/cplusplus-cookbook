@@ -23,7 +23,7 @@
 
 ### Variables
 
-**วิธีการสร้างตัวแปร จะอยู่ในรูปแบบของ `VAR_TYPE VAR_NAME = VALUE;` เช่น**
+วิธีการสร้างตัวแปร จะอยู่ในรูปแบบของ `VAR_TYPE VAR_NAME = VALUE;` เช่น
 
 ```c++
 #include <iostream>
@@ -37,7 +37,7 @@ int main()
 }
 ```
 
-**หรือเราจะไม่กำหนดค่าเริ่มต้นให้กับตัวแปรก็ได้ แต่ compiler ทำการสุ่มค่าให้**
+หรือเราจะไม่กำหนดค่าเริ่มต้นให้กับตัวแปรก็ได้ แต่ compiler ทำการสุ่มค่าให้
 
 ```c++
 #include <iostream>
@@ -52,7 +52,7 @@ int main()
 }
 ```
 
-**Program Example : สลับค่าตัวแปร**
+Program Example : สลับค่าตัวแปร
 
 ```c++
 #include <iostream>
@@ -220,7 +220,7 @@ int main()
 }
 ```
 
-**สามารถรวบคำสั่งได้ (แนะนำให้ tab บรรทัดที่ 2 ขึ้นไปให้ตำแหน่งอยู่ตรงกับผลลัพธ์)**
+สามารถรวบคำสั่งได้ (แนะนำให้ tab บรรทัดที่ 2 ขึ้นไปให้ตำแหน่งอยู่ตรงกับผลลัพธ์)
 
 ```c++
 #include <iostream>
@@ -237,7 +237,7 @@ int main()
 }
 ```
 
-**Program Example : โปรแกรมคำนวน vat 7% + service charge 10%**
+Program Example : โปรแกรมคำนวน vat 7% + service charge 10%
 
 ```c++
 #include <iostream>
@@ -265,7 +265,7 @@ int main()
 
 ### Reading input from the console
 
-**อ่านค่าจาก console ด้วยคำสั่ง `cin`**
+อ่านค่าจาก console ด้วยคำสั่ง `cin`
 
 ```c++
 #include <iostream>
@@ -284,7 +284,7 @@ int main()
 }
 ```
 
-**ในการรับค่าตัวแปรมากกว่า 1 ตัวสามารถใช้คั่นด้วย space หรือ enter ก็ได้**
+ในการรับค่าตัวแปรมากกว่า 1 ตัวสามารถใช้คั่นด้วย space หรือ enter ก็ได้
 
 ```c++
 #include <iostream>
@@ -305,7 +305,7 @@ int main()
 }
 ```
 
-**เช่นเดียวกับการใช้งาน `cout` เราสามารถรวบคำสั่ง `cin` ได้**
+เช่นเดียวกับการใช้งาน `cout` เราสามารถรวบคำสั่ง `cin` ได้
 
 ```c++
 #include <iostream>
@@ -325,7 +325,7 @@ int main()
 }
 ```
 
-**Program Exmaple : Fahrenheit to Celsius**
+Program Exmaple : Fahrenheit to Celsius
 
 ```c++
 #include <iostream>
@@ -369,7 +369,7 @@ int main()
 }
 ```
 
-**Program Example - คำนวณพื้นที่วงกลม**
+Program Example - คำนวณพื้นที่วงกลม
 
 ```c++
 #include <iostream>
