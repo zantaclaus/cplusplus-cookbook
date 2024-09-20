@@ -9,20 +9,6 @@
 5. [Array]
 6. [String]
 
-<!-- - Fundamental
-
-  - [Variables](#variables)
-  - [Constants](#constants)
-  - [Naming conventions](#naming-conventions)
-  - [Mathematical expressions](#mathematical-expressions)
-  - [Order of Operation](#order-of-operation)
-  - [Writing output to the console](#writing-output-to-the-console)
-  - [Reading input from the console](#reading-input-from-the-console)
-  - [CMath library](#cmath-library)
-  - [Comments](#comments)
-
-  - [Fundamental Types] -->
-
 ## Fundamental
 
 - [Variables](#variables)
@@ -362,7 +348,7 @@ int main()
 
 > document : https://cplusplus.com/reference/cmath/
 
-**ตัวอย่างการใช้งานฟังก์ชันจาก cmath library**
+ตัวอย่างการใช้งานฟังก์ชันจาก cmath library
 
 ```c++
 #include <iostream>
