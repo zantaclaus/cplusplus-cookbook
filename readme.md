@@ -436,6 +436,7 @@ int main()
 - [Formatting Output](#formatting-output)
 - [Data Limits](#data-limits)
 - [Type Casting](#type-casting)
+- [Working with Booleans](#working-with-booleans)
 
 ---
 
@@ -536,6 +537,340 @@ int main()
 
     double z = (double)x / y; // Cast variable x from INT to DOUBLE
     cout << z;
+
+    return 0;
+}
+```
+
+### Working with Booleans
+
+```c++
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    bool result = false;
+    cout << result;              // 0
+    cout << boolalpha << result; // false
+
+    bool result2 = true;
+    cout << result2;              // 1
+    cout << boolalpha << reslut2; // true
+
+    return 0;
+}
+```
+
+---
+
+### Decision Making
+
+- [Comparison Operators](#comparison-operators)
+- [Logical Operators](#logical-operators)
+- [Order of Logical Operators](#order-of-logical-operators)
+- [IF Statement](#if-statement)
+- [IF-ELSE Statement](#if-else-statement)
+- [Conditional Operator](#conditional-operator)
+- [SWITCH Statement] - **Commong Soon**
+
+---
+
+#### Comparison Operators
+
+| Operator | Name                     | Example |
+| :------: | ------------------------ | :-----: |
+|   `>`    | Grater than              |  x > y  |
+|   `<`    | Less than                |  x < y  |
+|   `>=`   | Grather than or equal to | x >= y  |
+|   `<=`   | Less than or equal to    | x <= y  |
+|   `==`   | Equal to                 | x == y  |
+|   `!=`   | Not equal                | x != y  |
+
+```c++
+#include <iostream>
+
+int main()
+{
+    int x = 10;
+    int y = 20;
+
+    bool result = x > y;    // result = false
+    bool result2 = x == 10; // result2 = true
+
+    return 0;
+}
+
+```
+
+---
+
+#### Logical Operators
+
+| Operator | Name        |       Example       |
+| :------: | ----------- | :-----------------: |
+|   `&&`   | Logical and |   x > 5 && x < 10   |
+|  `\|\|`  | Logical or  |  x < 0 \|\| x > 1   |
+|   `!`    | Logical not | !(x >= 2 && x <= 7) |
+
+```c++
+#include <iostream>
+
+int main()
+{
+    int age = 2;
+
+    bool isBaby = age >= 1 && age <= 3;      // isBaby = true
+    bool isNotBaby = !(age >= 1 && age <= 3) // isNotBaby = false
+
+    return 0;
+}
+```
+
+#### Order of Logical Operators
+
+```c++
+#include <iostream>
+
+int main ()
+{
+    // ()
+    // !
+    // &&
+    // ||
+
+    bool a = true;
+    bool b = false;
+
+    bool result1 = b || !a;     // result1 = false
+    bool result2 = a || b && b; // result2 = true
+    bool result3 = a || b && b; // result2 = true
+
+    return 0;
+}
+```
+
+---
+
+#### IF Statement
+
+```c++
+if (boolean)
+{
+    // do statements when boolean == true
+}
+```
+
+```c++
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int number = 100;
+    if (number > 0)
+    {
+        cout << "Positive Number" << endl;
+    }
+
+    cout << "End Program";
+
+    return 0;
+}
+
+```
+
+Program Example : โปรแกรมคำนวณเกรด
+
+```c++
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int score = 70;
+    if (score >= 80)
+    {
+        cout << "Grade A";
+    }
+
+    if (score >= 70 and score <= 79)
+    {
+        cout << "Grade B";
+    }
+
+    if (score >= 60 and score <= 69)
+    {
+        cout << "Grade C";
+    }
+
+    if (score <= 59)
+    {
+        cout << "Grade D"
+    }
+
+    return 0;
+}
+```
+
+---
+
+#### IF-ELSE Statement
+
+```c++
+if (boolean)
+{
+    // do statements when boolean == true
+}
+else
+{
+    // do statements when boolean == false
+}
+```
+
+```c++
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int number = 100;
+    if (number > 0)
+    {
+        cout << "Positive Number" << endl;
+    }
+    else
+    {
+        cout << "Not a Positive Number" << endl;
+    }
+
+    cout << "End Program";
+
+    return 0;
+}
+```
+
+Program Example : โปรแกรมคำนวณเกรด
+
+```c++
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int score = 70;
+    if (score >= 80)
+    {
+        cout << "Grade A";
+    }
+    else
+    {
+        if (score >= 70)
+        {
+            cout << "Grade B";
+        }
+        else
+        {
+            if (score >= 60)
+            {
+                cout << "Grade C";
+            }
+            else
+            {
+                cout << "Grade D";
+            }
+        }
+    }
+
+    return 0;
+}
+```
+
+แต่เนื่องจากในแต่ละ statement มีเพียง 1 คำสั่ง สามารถละเว้น `{}` ได้ เพื่อให้โค้ดอ่านง่ายขึ้น
+
+```c++
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int score = 70;
+    if (score >= 80)
+        cout << "Grade A";
+    else if (score >= 70)
+        cout << "Grade B";
+    else if (score >= 60)
+        cout << "Grade C";
+    else
+        cout << "Grade D";
+
+    return 0;
+}
+```
+
+---
+
+#### Conditional Operator
+
+```c++
+#include <iostream>
+
+int main()
+{
+    int price = 1000;
+
+    // double tax;
+    // if (price >= 1000)
+    // {
+    //     tax = .07;
+    // }
+    // else
+    // {
+    //     tax = 0.1;
+    // }
+    double tax = (price >= 1000) ? .07 : .01;
+
+    return 0;
+}
+```
+
+Program Example : ค้นหาจำนวนที่มากกว่า จากข้อมูลเข้าสองจำนวน
+
+```c++
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int first;
+    int second;
+    cin >> first >> second;
+
+    int result;
+    if (first > second)
+        result = first;
+    else
+        result = second;
+
+    cout << result;
+
+    return 0;
+}
+```
+
+```c++
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int first;
+    int second;
+    cin >> first >> second;
+
+    int result = (first > second) ? first : second;
+
+    cout << result;
 
     return 0;
 }
