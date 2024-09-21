@@ -542,6 +542,8 @@ int main()
 }
 ```
 
+---
+
 ### Working with Booleans
 
 ```c++
