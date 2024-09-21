@@ -646,7 +646,6 @@ int main ()
 
     bool result1 = b || !a;     // result1 = false
     bool result2 = a || b && b; // result2 = true
-    bool result3 = a || b && b; // result2 = true
 
     return 0;
 }
