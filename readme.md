@@ -542,8 +542,6 @@ int main()
 }
 ```
 
----
-
 ### Working with Booleans
 
 ```c++
@@ -566,7 +564,7 @@ int main()
 
 ---
 
-### Decision Making
+## Decision Making
 
 - [Comparison Operators](#comparison-operators)
 - [Logical Operators](#logical-operators)
@@ -578,7 +576,7 @@ int main()
 
 ---
 
-#### Comparison Operators
+### Comparison Operators
 
 | Operator | Name                     | Example |
 | :------: | ------------------------ | :-----: |
@@ -607,7 +605,7 @@ int main()
 
 ---
 
-#### Logical Operators
+### Logical Operators
 
 | Operator | Name        |       Example       |
 | :------: | ----------- | :-----------------: |
@@ -631,7 +629,7 @@ int main()
 
 ---
 
-#### Order of Logical Operators
+### Order of Logical Operators
 
 ```c++
 #include <iostream>
@@ -656,7 +654,7 @@ int main ()
 
 ---
 
-#### IF Statement
+### IF Statement
 
 ```c++
 if (boolean)
@@ -719,7 +717,7 @@ int main()
 
 ---
 
-#### IF-ELSE Statement
+### IF-ELSE Statement
 
 ```c++
 if (boolean)
@@ -814,7 +812,7 @@ int main()
 
 ---
 
-#### Conditional Operator
+### Conditional Operator
 
 ```c++
 #include <iostream>
