@@ -3,7 +3,7 @@
 ## Table of Contents
 
 1. [Fundamental](#fundamental)
-2. [Data Types] - Commong Soon
+2. [Data Types](#data-types)
 3. [Decision Making] - Commong Soon
 4. [Loops] - Commong Soon
 5. [Array] - Commong Soon
@@ -424,6 +424,118 @@ int main()
      Hello World
      This is also a comment
      */
+
+    return 0;
+}
+```
+
+## Data Types
+
+- [Fundamental Types](#fundamental-types)
+- [Initializing Variables](#initializing-variables)
+- [Formatting Output](#formatting-output)
+- [Data Limits](#data-limits)
+- [Type Casting](#type-casting)
+
+---
+
+### Fundamental Types
+
+**Integer Number**
+
+|    Type     | Range                                                   |
+| :---------: | ------------------------------------------------------- |
+|   `short`   | -32,768 to 32767                                        |
+|    `int`    | -2,147,483,648 to 2,147,483,647                         |
+|   `long`    | -2,147,483,648 to 2,147,483,647                         |
+| `long long` | -9,223,372,036,854,775,808 to 9,223,372,036,854,775,807 |
+
+**Floating-point Number**
+
+|     Type      | Range                | Precision (Digits) |
+| :-----------: | -------------------- | ------------------ |
+|    `float`    | -3.4E38 to 3.4E38    | 7                  |
+|   `double`    | -1.7E308 to 1.7E308  | 15                 |
+| `long double` | -3.4E932 to 1.7E4832 |                    |
+
+**Others Types**
+
+|  Type  | Range        |
+| :----: | ------------ |
+| `bool` | true / false |
+| `char` | 1 character  |
+
+---
+
+### Initializing Variables
+
+```c++
+#include <iostream>
+
+int main()
+{
+    double price = 25.50;
+    float taxRate = 0.07f;
+    long money = 90000L;
+    long long lifePoint = 999999999LL;
+    char letter = 'a';
+    bool isValid = false;
+
+    return 0;
+}
+```
+
+---
+
+### Formatting Output
+
+**Format floating-point number**
+
+```c++
+#include <iostream>
+#include <iomanip>
+using namespace std;
+
+int main()
+{
+    cout << fixed << setprecision(2) << 124.45678;
+
+    return 0;
+}
+```
+
+---
+
+### Data Limits
+
+```c++
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    cout << numeric_limits<int>::min() << endl  // min = -2,147,483,648
+         << numeric_limits<int>::max();         // max =  2,147,483,647
+
+    return 0;
+}
+```
+
+---
+
+### Type Casting
+
+```c++
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int x = 10;
+    int y = 3;
+
+    double z = (double)x / y; // Cast variable x from INT to DOUBLE
+    cout << z;
 
     return 0;
 }
