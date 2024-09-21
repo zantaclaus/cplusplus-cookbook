@@ -828,9 +828,9 @@ int main()
     // }
     // else
     // {
-    //     tax = 0.1;
+    //     tax = .1;
     // }
-    double tax = (price >= 1000) ? .07 : .01;
+    double tax = (price >= 1000) ? .07 : .1;
 
     return 0;
 }
