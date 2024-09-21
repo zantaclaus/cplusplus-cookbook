@@ -4,10 +4,10 @@
 
 1. [Fundamental](#fundamental)
 2. [Data Types](#data-types)
-3. [Decision Making] - Commong Soon
-4. [Loops] - Commong Soon
-5. [Array] - Commong Soon
-6. [String] - Commong Soon
+3. [Decision Making](#decision-making)
+4. [Loops] - **Commong Soon**
+5. [Array] - **Commong Soon**
+6. [String] - **Commong Soon**
 
 ## Fundamental
 
