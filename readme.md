@@ -627,6 +627,8 @@ int main()
 }
 ```
 
+---
+
 #### Order of Logical Operators
 
 ```c++
