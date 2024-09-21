@@ -690,24 +690,25 @@ using namespace std;
 int main()
 {
     int score = 70;
+
     if (score >= 80)
     {
         cout << "Grade A";
     }
 
-    if (score >= 70 and score <= 79)
+    if (score >= 70 && score <= 79)
     {
         cout << "Grade B";
     }
 
-    if (score >= 60 and score <= 69)
+    if (score >= 60 && score <= 69)
     {
         cout << "Grade C";
     }
 
     if (score <= 59)
     {
-        cout << "Grade D"
+        cout << "Grade D";
     }
 
     return 0;
