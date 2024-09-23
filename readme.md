@@ -5,9 +5,9 @@
 1. [Fundamental](#fundamental)
 2. [Data Types](#data-types)
 3. [Decision Making](#decision-making)
-4. [Loops] - **Commong Soon**
-5. [Array] - **Commong Soon**
-6. [String] - **Commong Soon**
+4. [Loops] - **Coming Soon**
+5. [Array] - **Coming Soon**
+6. [String] - **Coming Soon**
 
 ## Fundamental
 
@@ -572,7 +572,7 @@ int main()
 - [IF Statement](#if-statement)
 - [IF-ELSE Statement](#if-else-statement)
 - [Conditional Operator](#conditional-operator)
-- [SWITCH Statement] - **Commong Soon**
+- [SWITCH Statement] - **Coming Soon**
 
 ---
 
@@ -873,6 +873,155 @@ int main()
     int result = (first > second) ? first : second;
 
     cout << result;
+
+    return 0;
+}
+```
+
+---
+
+## Loops
+
+- [For loops](#for-loops)
+- [While loops](#while-loops)
+- [Do-while loops](#do-while-loops)
+- [Break and continue statements] - **Coming Soon**
+- [Nested Loop] - **Coming Soon**
+
+---
+
+### For loops
+
+```c++
+for (initialization; condition; update)
+{
+    // do staetment if condition is true
+}
+```
+
+```c++
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    for (int i = 0; i < 5; i++)
+    {
+        cout << "Hello World " << i << endl;
+    }
+
+    for (int i = 10; i >= 6; i--)
+    {
+        cout << "Hello World " << i << endl;
+    }
+
+    for (int i = 1; i <= 10; i++)
+    {
+        if (i % 2 == 0)
+        {
+            cout << i << endl;
+        }
+    }
+
+    for (int i = 1; i <= 10; i += 2)
+    {
+        cout << i << endl;
+    }
+
+    return 0;
+}
+```
+
+Program Example : หาผลรวมตัวเลขสิบตัวจาก input
+
+```c++
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int number;
+    int sum = 0;
+
+    for (int i = 0; i < 10; i++)
+    {
+        cin >> number;
+        sum += number;
+    }
+
+    cout << sum;
+}
+```
+
+---
+
+### While loops
+
+```c++
+while(condition)
+{
+    // Do statement if condition is True
+}
+```
+
+```c++
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int i = 0;
+    while (i < 5)
+    {
+        cout << "Hello World " << i << endl;
+        i++;
+    }
+
+    return 0;
+}
+```
+
+```c++
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int number = -1;
+
+    while (number != 0)
+    {
+        cin >> number;
+    }
+
+    return 0;
+}
+```
+
+---
+
+### Do-while loops
+
+```c++
+do
+{
+    // Always execute at least 1 time.
+    // Do statement until condition is false.
+} while (condition);
+```
+
+```c++
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int number;
+
+    do
+    {
+        cin >> number;
+    } while (number != 0);
 
     return 0;
 }
