@@ -5,7 +5,7 @@
 1. [Fundamental](#fundamental)
 2. [Data Types](#data-types)
 3. [Decision Making](#decision-making)
-4. [Loops] - **Coming Soon**
+4. [Loops](#loops)
 5. [Array] - **Coming Soon**
 6. [String] - **Coming Soon**
 
