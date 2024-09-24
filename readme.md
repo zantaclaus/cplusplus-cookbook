@@ -958,7 +958,7 @@ int main()
 ### While loops
 
 ```c++
-while(condition)
+while (condition)
 {
     // Do statement if condition is True
 }
