@@ -885,8 +885,7 @@ int main()
 - [For loops](#for-loops)
 - [While loops](#while-loops)
 - [Do-while loops](#do-while-loops)
-- [Break and continue statements] - **Coming Soon**
-- [Nested Loop] - **Coming Soon**
+- [Break and continue statements](#break-and-continue-statements)
 
 ---
 
@@ -1024,5 +1023,31 @@ int main()
     } while (number != 0);
 
     return 0;
+}
+```
+
+---
+
+### Break and continue statements
+
+`break;` used to jump out of a loop.
+
+```c++
+for (int i = 0; i < 10; i++) {
+  if (i == 5)
+    break;
+
+  cout << i << endl;
+}
+```
+
+`continue` used to continues with the next iteration in the loop.
+
+```c++
+for (int i = 0; i < 10; i++) {
+  if (i == 5)
+    continue;
+
+  cout << i << endl;
 }
 ```
