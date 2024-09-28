@@ -1146,11 +1146,11 @@ int main()
 int first[3] = {10, 20, 30};
 int second[3];
 
-for (int i = 0; i < 3; i++) // ! Can't use Ranged-base for loop !
+for (int i = 0; i < 3; i++) // ! Can't use Ranged-based for loop !
     second[i] = first[i];
 
 for (int number: second)
-    cout << number << endl;
+    cout << number << " ";
 ```
 
 ---
