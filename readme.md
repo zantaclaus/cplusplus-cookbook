@@ -1073,10 +1073,10 @@ for (int i = 0; i < 10; i++) {
 ## Arrays
 
 - [Creating Arrays](#creating-arrays)
-- [Copying Arrays]()
-- [Comparing Arrays]()
-- [Unpacking Arrays]()
-- [Sorting Arrays]()
+- [Copying Arrays](#copying-arrays)
+- [Comparing Arrays](#comparing-arrays)
+- [Unpacking Arrays](#upacking-arrays-structured-binding)
+- [Sorting Arrays](#sorting-arrays)
 
 ---
 
