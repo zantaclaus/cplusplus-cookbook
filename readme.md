@@ -6,7 +6,7 @@
 2. [Data Types](#data-types)
 3. [Decision Making](#decision-making)
 4. [Loops](#loops)
-5. [Array] - **Coming Soon**
+5. [Array](#arrays)
 6. [String] - **Coming Soon**
 
 ## Fundamental
@@ -882,14 +882,15 @@ int main()
 
 ## Loops
 
-- [For loops](#for-loops)
-- [While loops](#while-loops)
-- [Do-while loops](#do-while-loops)
+- [For Loops](#for-loops)
+- [Range-based for Loops]()
+- [While Loops](#while-loops)
+- [Do-while Loops](#do-while-loops)
 - [Break and continue statements](#break-and-continue-statements)
 
 ---
 
-### For loops
+### For Lops
 
 ```c++
 for (initialization; condition; update)
@@ -954,7 +955,22 @@ int main()
 
 ---
 
-### While loops
+### Range-based for Loops
+
+```c++
+int numbers[5] = { 10, 20, 30, 40, 50 }
+
+for (int number: numbers)
+    cout << number << endl;
+
+for (auto number: numbers)
+    cout << number << endl;
+
+```
+
+---
+
+### While Loops
 
 ```c++
 while (condition)
@@ -999,7 +1015,7 @@ int main()
 
 ---
 
-### Do-while loops
+### Do-while Loops
 
 ```c++
 do
@@ -1049,5 +1065,140 @@ for (int i = 0; i < 10; i++) {
     continue;
 
   cout << i << endl;
+}
+```
+
+---
+
+## Arrays
+
+- [Creating Arrays](#creating-arrays)
+- [Copying Arrays]()
+- [Comparing Arrays]()
+- [Unpacking Arrays]()
+- [Sorting Arrays]()
+
+---
+
+### Creating Arrays
+
+```c++
+int numbers[5]; // We get numbers[0], numbers[1], ..., numbers[4]
+numbers[0] = 10;
+numbers[1] = 20;
+numbers[2] = 30;
+numbers[3] = 40;
+numbers[4] = 50;
+
+cout << numbers[0] << endl
+     << numbers[1] << endl
+     << numbers[2] << endl
+     << numbers[3] << endl
+     << numbers[4] << endl:
+```
+
+```c++
+int numbers[5] = {10, 20, 30, 40, 50};
+```
+
+```c++
+int numbers[5];
+cin >> numbers[0]
+    >> numbers[1]
+    >> numbers[2]
+    >> numbers[3]
+    >> numbers[4];
+
+cout << numbers[0] << endl
+     << numbers[1] << endl
+     << numbers[2] << endl
+     << numbers[3] << endl
+     << numbers[4] << endl:
+```
+
+```c++
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int n;
+    cin >> n;
+
+    int numbers[n];
+    for (int i = 0; i < n; i++)
+        cin >> numbers[i];
+
+    for (int number: numbers)
+        cout << number << endl;
+}
+```
+
+---
+
+### Copying Arrays
+
+```c++
+int first[3] = {10, 20, 30};
+int second[3];
+
+for (int i = 0; i < 3; i++) // ! Can't use Ranged-base for loop !
+    second[i] = first[i];
+
+for (int number: second)
+    cout << number << endl;
+```
+
+---
+
+### Comparing Arrays
+
+```c++
+int first[] = {10, 20, 30};
+int second[] = {10, 20, 30};
+
+bool isEqual = true;
+for (int i = 0; i < 3; i++)
+    if (first[i] != second[i])
+    {
+        isEqual = false;
+        break;
+    }
+
+cout << boolalpha << isEqual;
+```
+
+---
+
+### Upacking Arrays (Structured Binding)
+
+```c++
+int numbers[3] = {10, 20, 30};
+
+// int x = numbers[0];
+// int y = numbers[1];
+// int z = numbers[2];
+auto [x, y, z] = numbers;
+```
+
+---
+
+### Sorting Arrays
+
+```c++
+int numbers[5] = {50, 10, 40, 20, 30};
+
+// Bubble sort - Asecdenting order
+for (int i = 0; i < 4; i++)
+{
+    for (int j = 0; j < 4; j++)
+    {
+        if (numbers[j] > numbers[j + 1])
+        {
+            int temp = numbers[j];
+            numbers[j] = numbers[j + 1];
+            numbers[j + 1] = temp;
+        }
+    }
 }
 ```
