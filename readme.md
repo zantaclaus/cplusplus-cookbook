@@ -1163,11 +1163,13 @@ int second[] = {10, 20, 30};
 
 bool isEqual = true;
 for (int i = 0; i < 3; i++)
+{
     if (first[i] != second[i])
     {
         isEqual = false;
         break;
     }
+}
 
 cout << boolalpha << isEqual;
 ```
