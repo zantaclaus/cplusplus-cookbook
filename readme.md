@@ -1083,7 +1083,7 @@ for (int i = 0; i < 10; i++) {
 ### Creating Arrays
 
 ```c++
-int numbers[5]; // We get numbers[0], numbers[1], ..., numbers[4]
+int numbers[5]; // We got numbers[0], numbers[1], ..., numbers[4]
 numbers[0] = 10;
 numbers[1] = 20;
 numbers[2] = 30;
@@ -1129,8 +1129,12 @@ int main()
     for (int i = 0; i < n; i++)
         cin >> numbers[i];
 
-    for (int number: numbers)
-        cout << number << endl;
+    for (int i = 0; i < n; i++)
+        cout << numbers[i] << " ";
+
+    // Or use Ranged-based for loop
+    // for (int number: numbers)
+        // cout << number << " ";
 }
 ```
 
