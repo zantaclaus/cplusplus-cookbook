@@ -1295,13 +1295,11 @@ for (int i = 0; i < message.length(); i++)
 {
     if ('A' <= message[i] and message[i] <= 'Z')
     {
-        message[i] = message[i] - ('A' - 'a');
+        message[i] = message[i] + ('a' - 'A');
     }
     else if ('a' <= message[i] and message[i] <= 'z')
     {
         message[i] = message[i] - ('a' - 'A');
     }
 }
-
-cout << message;
 ```
