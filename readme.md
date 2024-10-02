@@ -1303,3 +1303,9 @@ for (int i = 0; i < message.length(); i++)
     }
 }
 ```
+
+```c++
+int letter = 'A';
+
+cout << letter; // 65
+```
