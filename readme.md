@@ -1280,9 +1280,9 @@ for (int i = 0; i < message.length(); i++)
 {
     bool isUpperCase = 'A' <= message[i] and message[i] <= 'Z';
     bool isLowerCase = 'a' <= message[i] and message[i] <= 'z';
+
     if (isUpperCase || isLowerCase)
         countAlphabet += 1;
-
 }
 
 cout << "countAlphabet = " << countAlphabet;
