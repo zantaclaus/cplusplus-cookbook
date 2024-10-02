@@ -6,8 +6,8 @@
 2. [Data Types](#data-types)
 3. [Decision Making](#decision-making)
 4. [Loops](#loops)
-5. [Array](#arrays)
-6. [String] - **Coming Soon**
+5. [Arrays](#arrays)
+6. [Strings](#strings)
 
 ## Fundamental
 
@@ -1210,4 +1210,98 @@ for (int i = 0; i < 4; i++)
 
 for (int number: numbers)
     cout << number << " ";
+```
+
+## Strings
+
+- [String fundamental](#string-fundamental)
+- [String use cases](#string-use-cases)
+
+### String fundamental
+
+```c++
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    string message = "Hello"; // Define string
+
+    cout << message[0] << endl; // Accessing char in string
+
+    message[0] = 'h'; // Updating value in string
+    cout << message << endl; // hello
+
+    cout << message.length() << endl; // 5
+
+    message += " World";
+    cout << message << endl; // Hello World
+
+    string anotherMessage = message;
+    if (message == anotherMessage) // Compare 2 strings
+        cout << "Same";
+
+    cout << boolalpha << message.empty(); // false
+
+
+    return 0;
+}
+```
+
+### String use cases
+
+```c++
+string message = "Hello World";
+for (int i = 0; i < message.length(); i++)
+{
+    if ('a' <= message[i] and message[i] <= 'z')
+        cout << message[i] << endl;
+}
+```
+
+```c++
+string message = "Hello World";
+int countUpperCase = 0;
+
+for (int i = 0; i < message.length(); i++)
+{
+    if ('A' <= message[i] and message[i] <= 'Z')
+        countUpperCase += 1;
+}
+
+cout << "countUppercase = " << countUpperCase;
+```
+
+```c++
+string message = "Hello World";
+int countAlphabet = 0;
+
+for (int i = 0; i < message.length(); i++)
+{
+    bool isUpperCase = 'A' <= message[i] and message[i] <= 'Z';
+    bool isLowerCase = 'a' <= message[i] and message[i] <= 'z';
+    if (isUpperCase || isLowerCase)
+        countAlphabet += 1;
+
+}
+
+cout << "countAlphabet = " << countAlphabet;
+```
+
+```c++
+string message = "Hello World";
+
+for (int i = 0; i < message.length(); i++)
+{
+    if ('A' <= message[i] and message[i] <= 'Z')
+    {
+        message[i] = message[i] - ('A' - 'a');
+    }
+    else if ('a' <= message[i] and message[i] <= 'z')
+    {
+        message[i] = message[i] - ('a' - 'A');
+    }
+}
+
+cout << message;
 ```
